@@ -39,6 +39,8 @@ class BondPricing:
         else:
             return current_ytm
         
-bond_pricing = BondPricing()
-#print(bond_pricing.price(face_value= 100, rate = 5, coupon_frequency= 6, time_to_maturity= 36, yield_to_maturity = 6))
-print(bond_pricing.calc_ytm(face_value=100, discount_price=95.92, rate = 5,coupon_frequency=6, time_to_maturity=36))
+if __name__ == "__main__":
+    # Example usage     
+    bond_pricing = BondPricing()
+    #print(bond_pricing.price(face_value= 100, rate = 5, coupon_frequency= 6, time_to_maturity= 36, yield_to_maturity = 6))
+    print(bond_pricing.calc_ytm(face_value=100, discount_price=95.92, rate = 5,coupon_frequency=6, time_to_maturity=36))

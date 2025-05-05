@@ -44,8 +44,9 @@ class IrsPricing:
             cashflows.append(round(notional * self.interest_rate_service.get_interest_rate(i) / 100 / 12 , 2))
         return cashflows
     
+if __name__ == "__main__":
+    # Example usage
+    irs_pricing_service = IrsPricing()
+    print(irs_pricing_service.price_vanilla(notional=1000000, fixed_rate=5.25, time_to_maturity=24))
 
-irs_pricing_service = IrsPricing()
-print(irs_pricing_service.price_vanilla(notional=1000000, fixed_rate=5.25, time_to_maturity=24))
-
-print(irs_pricing_service.price_fixed_fixed(notional=1000000, fixed_rate=5.25, fixed_rate1=4.25, time_to_maturity=12))
+    print(irs_pricing_service.price_fixed_fixed(notional=1000000, fixed_rate=5.25, fixed_rate1=4.25, time_to_maturity=12))
